@@ -1,3 +1,286 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume — Paul Puccinelli</title>
+  <link rel="stylesheet" href="mySiteStyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
 
+  <header class="site-header">
+    <div class="logo"><a href="mySiteHome.html">Paul Puccinelli</a></div>
+    <button class="nav-toggle" id="navToggle" aria-label="Open navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="mySiteHome.html">Home</a></li>
+        <li><a href="mySiteAboutMe.html">About Me</a></li>
+        <li><a href="mySiteBlog.html">Blog</a></li>
+        <li><a href="mySiteResume.html" class="active">Resume</a></li>
+        <li><a href="mySiteProjects.html">Projects</a></li>
+        <li><a href="mySiteContactMe.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="page-hero">
+      <h1>Resume</h1>
+      <p>My education, experience, and technical skill set — all in one place.</p>
+    </section>
+
+    <section class="section section-gray">
+      <div class="resume-wrapper">
+
+        <!-- Download button -->
+        <div class="resume-download-bar">
+          <a href="resume.pdf" download class="btn btn-primary">
+            <i class="fas fa-download" style="margin-right:8px;"></i>Download PDF
+          </a>
+          <!-- Replace resume.pdf with your actual file path -->
+        </div>
+
+        <div class="resume-layout">
+
+          <!-- LEFT SIDEBAR -->
+          <div class="resume-sidebar">
+
+            <div class="resume-sidebar-block">
+              <div class="resume-sidebar-heading">Contact</div>
+              <div class="resume-sidebar-item">
+                <strong><i class="fas fa-envelope" style="margin-right:6px;opacity:.7;"></i>Email</strong>
+                <span>paulpuccinelli0420@gmail.com</span>
+              </div>
+              <div class="resume-sidebar-item">
+                <strong><i class="fab fa-github" style="margin-right:6px;opacity:.7;"></i>GitHub</strong>
+                <span>github.com/paulpuccinelli</span>
+              </div>
+              <div class="resume-sidebar-item">
+                <strong><i class="fab fa-linkedin-in" style="margin-right:6px;opacity:.7;"></i>LinkedIn</strong>
+                <span>linkedin.com/in/paulpuccinelli</span>
+              </div>
+            </div>
+
+            <div class="resume-sidebar-block">
+              <div class="resume-sidebar-heading">Education</div>
+              <div class="resume-sidebar-item">
+                <strong>B.S. Computer Science</strong>
+                <span>University — 2022–2026</span>
+              </div>
+              <div class="resume-sidebar-item">
+                <strong>GPA</strong>
+                <span>3.9 / 4.0</span>
+              </div>
+            </div>
+
+            <div class="resume-sidebar-block">
+              <div class="resume-sidebar-heading">Technical Skills</div>
+              <div class="rs-skill">
+                <span>Python</span>
+                <div class="rs-bar"><div class="rs-fill" style="width:92%"></div></div>
+              </div>
+              <div class="rs-skill">
+                <span>JavaScript</span>
+                <div class="rs-bar"><div class="rs-fill" style="width:88%"></div></div>
+              </div>
+              <div class="rs-skill">
+                <span>Java</span>
+                <div class="rs-bar"><div class="rs-fill" style="width:82%"></div></div>
+              </div>
+              <div class="rs-skill">
+                <span>C / C++</span>
+                <div class="rs-bar"><div class="rs-fill" style="width:75%"></div></div>
+              </div>
+              <div class="rs-skill">
+                <span>SQL</span>
+                <div class="rs-bar"><div class="rs-fill" style="width:80%"></div></div>
+              </div>
+              <div class="rs-skill">
+                <span>React</span>
+                <div class="rs-bar"><div class="rs-fill" style="width:85%"></div></div>
+              </div>
+              <div class="rs-skill">
+                <span>Node.js</span>
+                <div class="rs-bar"><div class="rs-fill" style="width:78%"></div></div>
+              </div>
+            </div>
+
+            <div class="resume-sidebar-block">
+              <div class="resume-sidebar-heading">Tools &amp; Platforms</div>
+              <div class="resume-sidebar-item"><span>Git &amp; GitHub</span></div>
+              <div class="resume-sidebar-item"><span>Docker</span></div>
+              <div class="resume-sidebar-item"><span>Linux / Bash</span></div>
+              <div class="resume-sidebar-item"><span>PostgreSQL / MongoDB</span></div>
+              <div class="resume-sidebar-item"><span>REST API Design</span></div>
+              <div class="resume-sidebar-item"><span>TensorFlow / PyTorch</span></div>
+            </div>
+
+            <div class="resume-sidebar-block">
+              <div class="resume-sidebar-heading">Languages</div>
+              <div class="resume-sidebar-item"><span>English — Native</span></div>
+              <div class="resume-sidebar-item"><span>Italian — Conversational</span></div>
+            </div>
+
+          </div><!-- /.resume-sidebar -->
+
+          <!-- MAIN CONTENT -->
+          <div class="resume-main">
+
+            <div class="resume-name">Paul Puccinelli</div>
+            <div class="resume-title">Computer Science Student &amp; Software Engineer</div>
+
+            <div class="resume-block">
+              <div class="resume-block-heading">Summary</div>
+              <p style="font-size:.9rem;color:var(--text-mid);line-height:1.8;">
+                Motivated and detail-oriented computer science student with a strong foundation in software engineering, algorithms, and full-stack web development. Proven ability to design and deliver functional software through academic projects and independent work. Actively seeking internship and entry-level opportunities in software engineering.
+              </p>
+            </div>
+
+            <div class="resume-block">
+              <div class="resume-block-heading">Experience</div>
+
+              <div class="resume-entry">
+                <div class="resume-entry-header">
+                  <span class="resume-entry-title">Software Engineering Intern</span>
+                  <span class="resume-entry-date">May 2024 – Aug 2024</span>
+                </div>
+                <div class="resume-entry-sub">Tech Startup — Remote</div>
+                <ul>
+                  <li>Built and shipped two new product features in React, improving user engagement by ~18% based on analytics.</li>
+                  <li>Refactored legacy Node.js API endpoints, reducing average response time by 35%.</li>
+                  <li>Collaborated with a cross-functional team of 5 using Agile/Scrum methodology.</li>
+                  <li>Wrote unit and integration tests using Jest, achieving 85% code coverage on new modules.</li>
+                </ul>
+              </div>
+
+              <div class="resume-entry">
+                <div class="resume-entry-header">
+                  <span class="resume-entry-title">Undergraduate Research Assistant</span>
+                  <span class="resume-entry-date">Jan 2024 – May 2024</span>
+                </div>
+                <div class="resume-entry-sub">University Department of Computer Science</div>
+                <ul>
+                  <li>Assisted faculty research on NLP-driven educational feedback systems.</li>
+                  <li>Preprocessed and cleaned a 50K-sample text dataset for model training.</li>
+                  <li>Implemented baseline LSTM models in Python (TensorFlow) and documented results.</li>
+                </ul>
+              </div>
+
+              <div class="resume-entry">
+                <div class="resume-entry-header">
+                  <span class="resume-entry-title">IT Help Desk Technician (Part-Time)</span>
+                  <span class="resume-entry-date">Sep 2022 – Dec 2023</span>
+                </div>
+                <div class="resume-entry-sub">University IT Department</div>
+                <ul>
+                  <li>Provided hardware and software support to 200+ students and faculty per semester.</li>
+                  <li>Diagnosed and resolved network, OS, and application issues with high first-contact resolution rate.</li>
+                </ul>
+              </div>
+
+            </div>
+
+            <div class="resume-block">
+              <div class="resume-block-heading">Education</div>
+
+              <div class="resume-entry">
+                <div class="resume-entry-header">
+                  <span class="resume-entry-title">Bachelor of Science — Computer Science</span>
+                  <span class="resume-entry-date">2022 – 2026</span>
+                </div>
+                <div class="resume-entry-sub">University — GPA: 3.9 / 4.0</div>
+                <ul>
+                  <li>Dean's List — All semesters to date.</li>
+                  <li>Relevant coursework: Data Structures, Algorithms, OS, Database Systems, ML, Networks, Software Engineering.</li>
+                  <li>Member, Association for Computing Machinery (ACM) student chapter.</li>
+                </ul>
+              </div>
+
+            </div>
+
+            <div class="resume-block">
+              <div class="resume-block-heading">Notable Projects</div>
+
+              <div class="resume-entry">
+                <div class="resume-entry-header">
+                  <span class="resume-entry-title">Task Management Platform</span>
+                  <span class="resume-entry-date">2024</span>
+                </div>
+                <div class="resume-entry-sub">React · Node.js · MongoDB · Socket.io</div>
+                <ul>
+                  <li>Full-stack web app with real-time task updates, JWT authentication, and team workspaces.</li>
+                  <li>Deployed on AWS EC2 with a CI/CD pipeline via GitHub Actions.</li>
+                </ul>
+              </div>
+
+              <div class="resume-entry">
+                <div class="resume-entry-header">
+                  <span class="resume-entry-title">Sentiment Analysis Web Tool</span>
+                  <span class="resume-entry-date">2023</span>
+                </div>
+                <div class="resume-entry-sub">Python · TensorFlow · Flask · React</div>
+                <ul>
+                  <li>Trained LSTM model on IMDB dataset achieving 91% validation accuracy.</li>
+                  <li>Wrapped model in a REST API (Flask) and built a React interface for interactive analysis.</li>
+                </ul>
+              </div>
+
+            </div>
+
+            <div class="resume-block">
+              <div class="resume-block-heading">Certifications &amp; Awards</div>
+
+              <div class="resume-entry">
+                <div class="resume-entry-header">
+                  <span class="resume-entry-title">Hackathon Finalist — Regional University Hackathon</span>
+                  <span class="resume-entry-date">2024</span>
+                </div>
+              </div>
+
+              <div class="resume-entry">
+                <div class="resume-entry-header">
+                  <span class="resume-entry-title">AWS Cloud Practitioner Essentials (In Progress)</span>
+                  <span class="resume-entry-date">2025</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div><!-- /.resume-main -->
+
+        </div><!-- /.resume-layout -->
+      </div><!-- /.resume-wrapper -->
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-logo">Paul Puccinelli</div>
+    <nav class="footer-nav">
+      <a href="mySiteHome.html">Home</a>
+      <a href="mySiteAboutMe.html">About</a>
+      <a href="mySiteBlog.html">Blog</a>
+      <a href="mySiteResume.html">Resume</a>
+      <a href="mySiteProjects.html">Projects</a>
+      <a href="mySiteContactMe.html">Contact</a>
+    </nav>
+    <div class="social-links">
+      <a href="#" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="#" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="mailto:paulpuccinelli0420@gmail.com" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+    <p class="footer-copy">&copy; 2025 Paul Puccinelli. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const nav    = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => nav.classList.toggle('open'));
+  </script>
+
+</body>
 </html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paul Puccinelli — Portfolio</title>
+  <link rel="stylesheet" href="mySiteStyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="logo"><a href="mySiteHome.html">Paul Puccinelli</a></div>
+    <button class="nav-toggle" id="navToggle" aria-label="Open navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="mySiteHome.html" class="active">Home</a></li>
+        <li><a href="mySiteAboutMe.html">About Me</a></li>
+        <li><a href="mySiteResume.html">Resume</a></li>
+        <li><a href="mySiteProjects.html">Projects</a></li>
+        <li><a href="mySiteBlog.html">Blog</a></li>
+        <li><a href="mySiteContactMe.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-text">
+        <span class="hero-eyebrow">Welcome to my portfolio</span>
+        <h1>MEET PAUL<br>PUCCINELLI</h1>
+        <p class="hero-tagline">Computer Science Student &amp; Aspiring Software Engineer</p>
+        <p class="hero-desc">Paul is a dedicated computer science student with a passion for building elegant, high-performance software. He combines a strong academic foundation with hands-on project experience, driven by curiosity and a commitment to technical excellence.</p>
+        <a href="mySiteAboutMe.html" class="btn btn-outline">Read More</a>
+      </div>
+      <div class="hero-portrait">
+        <img src="myPortrait.jpg" alt="Paul Puccinelli">
+      </div>
+    </section>
+
+    <!-- RESUME CTA -->
+    <section class="cta-section">
+      <h2>Looking for a Driven Engineer?</h2>
+      <p>My resume outlines my education, technical skills, and project experience. I'm actively seeking internship and entry-level opportunities.</p>
+      <div class="cta-buttons">
+        <a href="mySiteResume.html" class="btn btn-white">View Resume</a>
+        <a href="mySiteContactMe.html" class="btn btn-ghost">Get In Touch</a>
+      </div>
+    </section>
+
+    <!-- CONTACT CTA -->
+    <section class="section section-white" style="text-align:center;">
+      <p class="section-label">Say Hello</p>
+      <h2 class="section-title">Let's Connect</h2>
+      <p class="section-subtitle" style="margin-bottom:36px;">Whether you have an opportunity, a project idea, or just want to talk tech — my inbox is always open.</p>
+      <a href="mySiteContactMe.html" class="btn btn-accent">Contact Me</a>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-logo">Paul Puccinelli</div>
+    <nav class="footer-nav">
+      <a href="mySiteHome.html">Home</a>
+      <a href="mySiteAboutMe.html">About</a>
+      <a href="mySiteBlog.html">Blog</a>
+      <a href="mySiteResume.html">Resume</a>
+      <a href="mySiteProjects.html">Projects</a>
+      <a href="mySiteContactMe.html">Contact</a>
+    </nav>
+    <div class="social-links">
+      <a href="#" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="#" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="mailto:paulpuccinelli0420@gmail.com" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+    <p class="footer-copy">&copy; 2025 Paul Puccinelli. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const nav    = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => nav.classList.toggle('open'));
+  </script>
+
+</body>
+</html>

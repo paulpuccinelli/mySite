@@ -1,3 +1,159 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Paul Puccinelli</title>
+  <link rel="stylesheet" href="mySiteStyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
 
+  <header class="site-header">
+    <div class="logo"><a href="mySiteHome.html">Paul Puccinelli</a></div>
+    <button class="nav-toggle" id="navToggle" aria-label="Open navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="mySiteHome.html">Home</a></li>
+        <li><a href="mySiteAboutMe.html">About Me</a></li>
+        <li><a href="mySiteBlog.html" class="active">Blog</a></li>
+        <li><a href="mySiteResume.html">Resume</a></li>
+        <li><a href="mySiteProjects.html">Projects</a></li>
+        <li><a href="mySiteContactMe.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="page-hero">
+      <h1>Blog</h1>
+      <p>Thoughts on software engineering, computer science, and the things I'm learning along the way.</p>
+    </section>
+
+    <section class="section section-gray">
+      <div class="blog-grid">
+
+        <article class="blog-card">
+          <div class="blog-card-header" style="background:#4a6a8a;">
+            <i class="fas fa-code" style="font-size:3rem;color:rgba(255,255,255,0.4);"></i>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta">
+              <span class="card-tag">Software Engineering</span>
+              <span class="blog-date">April 20, 2025</span>
+            </div>
+            <h2 class="blog-card-title">What I Learned Building My First Full-Stack App</h2>
+            <p class="blog-card-text">Shipping a real product — even a small one — teaches you things no classroom can. Here's what surprised me most about connecting a React frontend to a Node.js backend for the first time.</p>
+            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-card-header" style="background:#3a5a7a;">
+            <i class="fas fa-brain" style="font-size:3rem;color:rgba(255,255,255,0.4);"></i>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta">
+              <span class="card-tag">Machine Learning</span>
+              <span class="blog-date">March 8, 2025</span>
+            </div>
+            <h2 class="blog-card-title">Getting Started with NLP: A Practical Introduction</h2>
+            <p class="blog-card-text">Natural language processing can feel overwhelming at first. I break down the fundamentals — tokenization, embeddings, and sequence models — in terms that actually stuck for me.</p>
+            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-card-header" style="background:#2e4a6a;">
+            <i class="fas fa-trophy" style="font-size:3rem;color:rgba(255,255,255,0.4);"></i>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta">
+              <span class="card-tag">Experience</span>
+              <span class="blog-date">February 14, 2025</span>
+            </div>
+            <h2 class="blog-card-title">My First Hackathon: 24 Hours to Build Something Real</h2>
+            <p class="blog-card-text">I went in with a half-formed idea and came out a hackathon finalist. Here's a candid look at the chaos, the late-night pivots, and what I'd do differently next time.</p>
+            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-card-header" style="background:#456070;">
+            <i class="fas fa-sitemap" style="font-size:3rem;color:rgba(255,255,255,0.4);"></i>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta">
+              <span class="card-tag">Computer Science</span>
+              <span class="blog-date">January 22, 2025</span>
+            </div>
+            <h2 class="blog-card-title">Why Algorithms Still Matter (Even If You Use Libraries)</h2>
+            <p class="blog-card-text">It's tempting to think Big-O analysis is just for interviews. Here's how a solid understanding of algorithmic complexity saved me hours of debugging on a real project.</p>
+            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-card-header" style="background:#3c5a6e;">
+            <i class="fas fa-graduation-cap" style="font-size:3rem;color:rgba(255,255,255,0.4);"></i>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta">
+              <span class="card-tag">Personal</span>
+              <span class="blog-date">December 5, 2024</span>
+            </div>
+            <h2 class="blog-card-title">Why I Chose Computer Science</h2>
+            <p class="blog-card-text">The honest answer isn't that I always knew. It was a process of following curiosity, writing my first terrible Python script, and realizing that building software gives me a feeling nothing else does.</p>
+            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-card-header" style="background:#506070;">
+            <i class="fas fa-database" style="font-size:3rem;color:rgba(255,255,255,0.4);"></i>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta">
+              <span class="card-tag">Databases</span>
+              <span class="blog-date">November 10, 2024</span>
+            </div>
+            <h2 class="blog-card-title">SQL vs. NoSQL: Choosing the Right Database for Your Project</h2>
+            <p class="blog-card-text">After using both in academic and personal projects, here's my practical take on when to reach for a relational database versus a document store — and why it actually matters for your architecture.</p>
+            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-logo">Paul Puccinelli</div>
+    <nav class="footer-nav">
+      <a href="mySiteHome.html">Home</a>
+      <a href="mySiteAboutMe.html">About</a>
+      <a href="mySiteBlog.html">Blog</a>
+      <a href="mySiteResume.html">Resume</a>
+      <a href="mySiteProjects.html">Projects</a>
+      <a href="mySiteContactMe.html">Contact</a>
+    </nav>
+    <div class="social-links">
+      <a href="#" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="#" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="mailto:paulpuccinelli0420@gmail.com" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+    <p class="footer-copy">&copy; 2025 Paul Puccinelli. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const nav    = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => nav.classList.toggle('open'));
+  </script>
+
+</body>
 </html>

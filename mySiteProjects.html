@@ -1,3 +1,202 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Paul Puccinelli</title>
+  <link rel="stylesheet" href="mySiteStyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
 
+  <header class="site-header">
+    <div class="logo"><a href="mySiteHome.html">Paul Puccinelli</a></div>
+    <button class="nav-toggle" id="navToggle" aria-label="Open navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="mySiteHome.html">Home</a></li>
+        <li><a href="mySiteAboutMe.html">About Me</a></li>
+        <li><a href="mySiteBlog.html">Blog</a></li>
+        <li><a href="mySiteResume.html">Resume</a></li>
+        <li><a href="mySiteProjects.html" class="active">Projects</a></li>
+        <li><a href="mySiteContactMe.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="page-hero">
+      <h1>Projects</h1>
+      <p>A collection of software I've built — from full-stack web apps to machine learning models.</p>
+    </section>
+
+    <section class="section section-gray">
+      <div class="cards-grid">
+
+        <div class="card">
+          <div class="card-img" style="background:#4a6a8a;">
+            <div class="card-img-icon">⚙️</div>
+          </div>
+          <div class="card-body">
+            <span class="card-tag">Full Stack</span>
+            <h3 class="card-title">Task Management Platform</h3>
+            <p class="card-text">A responsive task management web app featuring real-time collaboration, JWT authentication, team workspaces, and a clean drag-and-drop interface. Deployed on AWS EC2 with GitHub Actions CI/CD.</p>
+            <div class="card-tags">
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">Socket.io</span>
+              <span class="tag">AWS</span>
+            </div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;">
+              <a href="#" class="btn btn-primary" style="padding:9px 18px;font-size:0.75rem;"><i class="fab fa-github" style="margin-right:6px;"></i>GitHub</a>
+              <a href="#" class="btn btn-outline" style="padding:9px 18px;font-size:0.75rem;"><i class="fas fa-external-link-alt" style="margin-right:6px;"></i>Live Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img" style="background:#3a5a7a;">
+            <div class="card-img-icon">🤖</div>
+          </div>
+          <div class="card-body">
+            <span class="card-tag">Machine Learning</span>
+            <h3 class="card-title">Sentiment Analyzer</h3>
+            <p class="card-text">An NLP web tool that classifies text sentiment as positive, negative, or neutral. Built with a custom-trained LSTM model (91% accuracy on IMDB dataset), a Flask REST API, and a React frontend.</p>
+            <div class="card-tags">
+              <span class="tag">Python</span>
+              <span class="tag">TensorFlow</span>
+              <span class="tag">Flask</span>
+              <span class="tag">React</span>
+            </div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;">
+              <a href="#" class="btn btn-primary" style="padding:9px 18px;font-size:0.75rem;"><i class="fab fa-github" style="margin-right:6px;"></i>GitHub</a>
+              <a href="#" class="btn btn-outline" style="padding:9px 18px;font-size:0.75rem;"><i class="fas fa-external-link-alt" style="margin-right:6px;"></i>Live Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img" style="background:#2e4a6a;">
+            <div class="card-img-icon">📊</div>
+          </div>
+          <div class="card-body">
+            <span class="card-tag">Data Science</span>
+            <h3 class="card-title">Stock Market Dashboard</h3>
+            <p class="card-text">An interactive financial dashboard for tracking real-time stock prices, historical trends, and portfolio performance. Uses live market data APIs and interactive Plotly charts with Pandas data processing.</p>
+            <div class="card-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">Plotly</span>
+              <span class="tag">Dash</span>
+            </div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;">
+              <a href="#" class="btn btn-primary" style="padding:9px 18px;font-size:0.75rem;"><i class="fab fa-github" style="margin-right:6px;"></i>GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img" style="background:#5a6a7a;">
+            <div class="card-img-icon">🌐</div>
+          </div>
+          <div class="card-body">
+            <span class="card-tag">Frontend</span>
+            <h3 class="card-title">Algorithm Visualizer</h3>
+            <p class="card-text">An interactive web app that animates classic sorting and graph-traversal algorithms step by step. Built to deepen my understanding of algorithmic complexity and to make CS education more visual.</p>
+            <div class="card-tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">D3.js</span>
+              <span class="tag">HTML/CSS</span>
+            </div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;">
+              <a href="#" class="btn btn-primary" style="padding:9px 18px;font-size:0.75rem;"><i class="fab fa-github" style="margin-right:6px;"></i>GitHub</a>
+              <a href="#" class="btn btn-outline" style="padding:9px 18px;font-size:0.75rem;"><i class="fas fa-external-link-alt" style="margin-right:6px;"></i>Live Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img" style="background:#48687e;">
+            <div class="card-img-icon">☁️</div>
+          </div>
+          <div class="card-body">
+            <span class="card-tag">API Integration</span>
+            <h3 class="card-title">Weather Forecast App</h3>
+            <p class="card-text">A clean, responsive weather application that provides current conditions and a 7-day forecast for any city using the OpenWeatherMap API. Features geolocation, unit conversion, and animated weather icons.</p>
+            <div class="card-tags">
+              <span class="tag">Vue.js</span>
+              <span class="tag">REST API</span>
+              <span class="tag">CSS3</span>
+            </div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;">
+              <a href="#" class="btn btn-primary" style="padding:9px 18px;font-size:0.75rem;"><i class="fab fa-github" style="margin-right:6px;"></i>GitHub</a>
+              <a href="#" class="btn btn-outline" style="padding:9px 18px;font-size:0.75rem;"><i class="fas fa-external-link-alt" style="margin-right:6px;"></i>Live Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img" style="background:#3e5870;">
+            <div class="card-img-icon">🔐</div>
+          </div>
+          <div class="card-body">
+            <span class="card-tag">Systems</span>
+            <h3 class="card-title">Password Manager CLI</h3>
+            <p class="card-text">A command-line password manager with AES-256 encryption, master password hashing, and a simple yet secure local vault. Built as a deep dive into cryptographic primitives and secure data storage.</p>
+            <div class="card-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Cryptography</span>
+              <span class="tag">CLI</span>
+              <span class="tag">SQLite</span>
+            </div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;">
+              <a href="#" class="btn btn-primary" style="padding:9px 18px;font-size:0.75rem;"><i class="fab fa-github" style="margin-right:6px;"></i>GitHub</a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.cards-grid -->
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <h2>Want to collaborate on something?</h2>
+      <p>I'm always open to interesting projects, research opportunities, or just a good technical conversation.</p>
+      <div class="cta-buttons">
+        <a href="mySiteContactMe.html" class="btn btn-white">Get In Touch</a>
+        <a href="#" class="btn btn-ghost"><i class="fab fa-github" style="margin-right:8px;"></i>View GitHub</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-logo">Paul Puccinelli</div>
+    <nav class="footer-nav">
+      <a href="mySiteHome.html">Home</a>
+      <a href="mySiteAboutMe.html">About</a>
+      <a href="mySiteBlog.html">Blog</a>
+      <a href="mySiteResume.html">Resume</a>
+      <a href="mySiteProjects.html">Projects</a>
+      <a href="mySiteContactMe.html">Contact</a>
+    </nav>
+    <div class="social-links">
+      <a href="#" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="#" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="mailto:paulpuccinelli0420@gmail.com" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+    <p class="footer-copy">&copy; 2025 Paul Puccinelli. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const nav    = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => nav.classList.toggle('open'));
+  </script>
+
+</body>
 </html>

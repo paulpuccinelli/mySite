@@ -1,3 +1,185 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me — Paul Puccinelli</title>
+  <link rel="stylesheet" href="mySiteStyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
 
+  <header class="site-header">
+    <div class="logo"><a href="mySiteHome.html">Paul Puccinelli</a></div>
+    <button class="nav-toggle" id="navToggle" aria-label="Open navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="mySiteHome.html">Home</a></li>
+        <li><a href="mySiteAboutMe.html" class="active">About Me</a></li>
+        <li><a href="mySiteBlog.html">Blog</a></li>
+        <li><a href="mySiteResume.html">Resume</a></li>
+        <li><a href="mySiteProjects.html">Projects</a></li>
+        <li><a href="mySiteContactMe.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="page-hero">
+      <h1>About Me</h1>
+      <p>A little more about who I am, where I've been, and where I'm headed.</p>
+    </section>
+
+    <section class="section section-white">
+      <div class="about-page-grid">
+
+        <!-- SIDEBAR -->
+        <aside class="about-sidebar">
+          <div class="about-portrait">
+            <img src="myPortrait.jpg" alt="Paul Puccinelli">
+          </div>
+          <div class="sidebar-contact">
+            <div class="sidebar-contact-item">
+              <span class="icon"><i class="fas fa-user"></i></span>
+              <span>Paul Puccinelli</span>
+            </div>
+            <div class="sidebar-contact-item">
+              <span class="icon"><i class="fas fa-envelope"></i></span>
+              <span>paulpuccinelli0420@gmail.com</span>
+            </div>
+            <div class="sidebar-contact-item">
+              <span class="icon"><i class="fas fa-graduation-cap"></i></span>
+              <span>Computer Science, B.S.</span>
+            </div>
+            <div class="sidebar-contact-item">
+              <span class="icon"><i class="fab fa-github"></i></span>
+              <span>github.com/paulpuccinelli</span>
+            </div>
+            <div class="sidebar-contact-item">
+              <span class="icon"><i class="fab fa-linkedin-in"></i></span>
+              <span>linkedin.com/in/paulpuccinelli</span>
+            </div>
+          </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <div class="about-main">
+
+          <div class="about-block">
+            <h2>Who I Am</h2>
+            <p>Hi, I'm Paul — a computer science student with a genuine passion for building software that is clean, efficient, and meaningful. I've always been someone who loves to understand how things work, which naturally drew me into programming and systems design.</p>
+            <p>I believe great software is as much about thoughtful engineering as it is about creativity. Whether I'm architecting a backend API or fine-tuning a user interface, I bring the same attention to detail and drive for quality to everything I build.</p>
+            <p>Outside of code, I'm an avid reader, a curious problem-solver, and someone who genuinely enjoys the collaborative energy of a great team working toward a shared goal.</p>
+          </div>
+
+          <div class="about-block">
+            <h2>Education</h2>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-date">2022 – Present</div>
+                <div class="timeline-title">Bachelor of Science in Computer Science</div>
+                <div class="timeline-subtitle">University — Expected Graduation: May 2026</div>
+                <div class="timeline-desc">Relevant coursework: Data Structures &amp; Algorithms, Operating Systems, Database Systems, Machine Learning, Computer Networks, Software Engineering, Linear Algebra.</div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-date">2018 – 2022</div>
+                <div class="timeline-title">High School Diploma</div>
+                <div class="timeline-subtitle">Local High School — Valedictorian</div>
+                <div class="timeline-desc">Graduated top of class with highest honors. Completed AP Computer Science, AP Calculus BC, and AP Physics.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-block">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <div class="skill-label"><span>Python</span><span>92%</span></div>
+                <div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-label"><span>JavaScript</span><span>88%</span></div>
+                <div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-label"><span>Java</span><span>82%</span></div>
+                <div class="skill-bar"><div class="skill-fill" style="width:82%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-label"><span>C / C++</span><span>75%</span></div>
+                <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-label"><span>React</span><span>85%</span></div>
+                <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-label"><span>SQL / Databases</span><span>80%</span></div>
+                <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-label"><span>Node.js</span><span>78%</span></div>
+                <div class="skill-bar"><div class="skill-fill" style="width:78%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-label"><span>HTML / CSS</span><span>93%</span></div>
+                <div class="skill-bar"><div class="skill-fill" style="width:93%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-block">
+            <h2>Goals</h2>
+            <p>My near-term goal is to secure a software engineering internship where I can contribute meaningfully to a real product while deepening my skills in full-stack development and system design. Long term, I aim to work on impactful technology — whether that's at a high-growth startup or within a research-driven engineering org.</p>
+            <p>I'm particularly drawn to roles involving distributed systems, developer tooling, and anything that sits at the intersection of performance and user experience.</p>
+          </div>
+
+          <div class="about-block">
+            <h2>Interests</h2>
+            <div class="interests-list">
+              <span class="interest-tag">🧠 Machine Learning</span>
+              <span class="interest-tag">🌐 Web Development</span>
+              <span class="interest-tag">📚 Technical Reading</span>
+              <span class="interest-tag">🏃 Running</span>
+              <span class="interest-tag">🎮 Game Dev</span>
+              <span class="interest-tag">🔐 Cybersecurity</span>
+              <span class="interest-tag">🎵 Music</span>
+              <span class="interest-tag">✈️ Travel</span>
+            </div>
+          </div>
+
+        </div><!-- /.about-main -->
+      </div><!-- /.about-page-grid -->
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-logo">Paul Puccinelli</div>
+    <nav class="footer-nav">
+      <a href="mySiteHome.html">Home</a>
+      <a href="mySiteAboutMe.html">About</a>
+      <a href="mySiteBlog.html">Blog</a>
+      <a href="mySiteResume.html">Resume</a>
+      <a href="mySiteProjects.html">Projects</a>
+      <a href="mySiteContactMe.html">Contact</a>
+    </nav>
+    <div class="social-links">
+      <a href="#" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="#" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="mailto:paulpuccinelli0420@gmail.com" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+    <p class="footer-copy">&copy; 2025 Paul Puccinelli. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const nav    = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => nav.classList.toggle('open'));
+  </script>
+
+</body>
 </html>

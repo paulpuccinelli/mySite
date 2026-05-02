@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Paul Puccinelli</title>
+  <link rel="stylesheet" href="mySiteStyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="logo"><a href="mySiteHome.html">Paul Puccinelli</a></div>
+    <button class="nav-toggle" id="navToggle" aria-label="Open navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="mySiteHome.html">Home</a></li>
+        <li><a href="mySiteAboutMe.html">About Me</a></li>
+        <li><a href="mySiteResume.html">Resume</a></li>
+        <li><a href="mySiteProjects.html">Projects</a></li>
+        <li><a href="mySiteBlog.html">Blog</a></li>
+        <li><a href="mySiteContactMe.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="page-hero">
+      <h1>Contact Me</h1>
+      <p>Have an opportunity, a project idea, or just want to say hi? I'd love to hear from you.</p>
+    </section>
+
+    <section class="section section-gray">
+      <div class="contact-layout">
+
+        <!-- INFO COLUMN -->
+        <div class="contact-info">
+          <h2>Let's Talk</h2>
+          <p>Whether you're a recruiter with an internship opportunity, a fellow developer who wants to collaborate, or someone with a question about my work — feel free to reach out. I typically respond within 24 hours.</p>
+        </div>
+
+        <!-- FORM COLUMN -->
+        <div class="contact-form">
+          <form id="contactForm" novalidate>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Jane Smith" autocomplete="name">
+                <span class="field-error" id="nameError">Please enter your name.</span>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="jane@example.com" autocomplete="email">
+                <span class="field-error" id="emailError">Please enter a valid email address.</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Internship Opportunity / Project Collaboration / ...">
+              <span class="field-error" id="subjectError">Please enter a subject.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell me what's on your mind..."></textarea>
+              <span class="field-error" id="messageError">Please enter your message.</span>
+            </div>
+
+            <!-- SLIDER CAPTCHA -->
+            <div class="form-group slider-captcha">
+              <label>Verification — drag the slider into the highlighted zone</label>
+              <div class="slider-track" id="sliderTrack">
+                <div class="slider-target" id="sliderTarget"></div>
+                <div class="slider-fill"   id="sliderFill"></div>
+                <div class="slider-thumb"  id="sliderThumb">
+                  <i class="fas fa-chevron-right"></i>
+                </div>
+                <span class="slider-label" id="sliderLabel">Drag to verify</span>
+              </div>
+              <span class="field-error" id="captchaError">Please complete the slider verification.</span>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;padding:15px;">
+              Send Message &nbsp;<i class="fas fa-paper-plane"></i>
+            </button>
+
+          </form>
+
+          <div class="form-success" id="formSuccess">
+            <i class="fas fa-check-circle" style="font-size:1.5rem;margin-bottom:8px;display:block;"></i>
+            <strong>Message sent!</strong><br>
+            Your email client should have opened with the message pre-filled. I'll get back to you soon.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-logo">Paul Puccinelli</div>
+    <nav class="footer-nav">
+      <a href="mySiteHome.html">Home</a>
+      <a href="mySiteAboutMe.html">About</a>
+      <a href="mySiteResume.html">Resume</a>
+      <a href="mySiteProjects.html">Projects</a>
+      <a href="mySiteBlog.html">Blog</a>
+      <a href="mySiteContactMe.html">Contact</a>
+    </nav>
+    <div class="social-links">
+      <a href="#" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="#" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="mailto:paulpuccinelli0420@gmail.com" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+    <p class="footer-copy">&copy; 2025 Paul Puccinelli. All rights reserved.</p>
+  </footer>
+
+  <script>
+    /* ---- Nav toggle ---- */
+    document.getElementById('navToggle')
+      .addEventListener('click', () =>
+        document.getElementById('navLinks').classList.toggle('open'));
+
+    /* ======================================================
+       SLIDER CAPTCHA
+    ====================================================== */
+    const THUMB_W     = 50;
+    const sliderTrack = document.getElementById('sliderTrack');
+    const sliderFill  = document.getElementById('sliderFill');
+    const sliderThumb = document.getElementById('sliderThumb');
+    const sliderLabel = document.getElementById('sliderLabel');
+    const sliderTarget = document.getElementById('sliderTarget');
+    const captchaErr  = document.getElementById('captchaError');
+
+    let captchaPassed  = false;
+    let targetStartPct = 0;
+    let targetEndPct   = 0;
+    let isDragging     = false;
+    let dragStartX     = 0;
+    let thumbStartX    = 0;
+
+    function initSlider() {
+      captchaPassed  = false;
+      /* Random target zone spanning 18% of track width, placed 52–70% along */
+      targetStartPct = 0.52 + Math.random() * 0.18;
+      targetEndPct   = targetStartPct + 0.18;
+
+      sliderTrack.classList.remove('captcha-verified', 'captcha-error');
+      sliderThumb.style.transition = '';
+      sliderThumb.style.left       = '0px';
+      sliderThumb.innerHTML        = '<i class="fas fa-chevron-right"></i>';
+      sliderFill.style.width       = '0px';
+      sliderLabel.style.opacity    = '1';
+      sliderLabel.textContent      = 'Drag to verify';
+
+      /* Use rAF so the track has been laid out before we measure it */
+      requestAnimationFrame(positionTarget);
+    }
+
+    function positionTarget() {
+      const w = sliderTrack.offsetWidth;
+      sliderTarget.style.left  = (targetStartPct * w) + 'px';
+      sliderTarget.style.width = ((targetEndPct - targetStartPct) * w) + 'px';
+    }
+
+    /* Drag — mouse & touch */
+    sliderThumb.addEventListener('mousedown',  startDrag);
+    sliderThumb.addEventListener('touchstart', startDrag, { passive: false });
+
+    function startDrag(e) {
+      if (captchaPassed) return;
+      isDragging  = true;
+      dragStartX  = e.touches ? e.touches[0].clientX : e.clientX;
+      thumbStartX = parseFloat(sliderThumb.style.left) || 0;
+      document.addEventListener('mousemove',  onDrag);
+      document.addEventListener('touchmove',  onDrag,   { passive: false });
+      document.addEventListener('mouseup',    endDrag);
+      document.addEventListener('touchend',   endDrag);
+      e.preventDefault();
+    }
+
+    function onDrag(e) {
+      if (!isDragging) return;
+      e.preventDefault();
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      const dx      = clientX - dragStartX;
+      const trackW  = sliderTrack.offsetWidth;
+      const newLeft = Math.max(0, Math.min(trackW - THUMB_W, thumbStartX + dx));
+      sliderThumb.style.left  = newLeft + 'px';
+      sliderFill.style.width  = newLeft + 'px';
+      sliderLabel.style.opacity = newLeft > 30 ? '0' : '1';
+    }
+
+    function endDrag() {
+      if (!isDragging) return;
+      isDragging = false;
+      document.removeEventListener('mousemove',  onDrag);
+      document.removeEventListener('touchmove',  onDrag);
+      document.removeEventListener('mouseup',    endDrag);
+      document.removeEventListener('touchend',   endDrag);
+
+      const trackW      = sliderTrack.offsetWidth;
+      const thumbLeft   = parseFloat(sliderThumb.style.left) || 0;
+      const thumbCenter = thumbLeft + THUMB_W / 2;
+      const tStart      = targetStartPct * trackW;
+      const tEnd        = targetEndPct   * trackW;
+
+      if (thumbCenter >= tStart && thumbCenter <= tEnd) {
+        captchaPassed = true;
+        sliderTrack.classList.add('captcha-verified');
+        sliderThumb.innerHTML        = '<i class="fas fa-check"></i>';
+        sliderLabel.textContent      = 'Verified';
+        sliderLabel.style.opacity    = '1';
+        captchaErr.classList.remove('show');
+      } else {
+        sliderTrack.classList.add('captcha-error');
+        sliderThumb.innerHTML = '<i class="fas fa-times"></i>';
+        setTimeout(initSlider, 700);
+      }
+    }
+
+    window.addEventListener('resize', positionTarget);
+    initSlider();
+
+    /* ======================================================
+       FORM VALIDATION
+    ====================================================== */
+    const form = document.getElementById('contactForm');
+
+    function setError(id, show) {
+      const input = document.getElementById(id);
+      const err   = document.getElementById(id + 'Error');
+      input.classList.toggle('error', show);
+      err.classList.toggle('show', show);
+    }
+
+    function validEmail(v) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const name    = document.getElementById('name').value.trim();
+      const email   = document.getElementById('email').value.trim();
+      const subject = document.getElementById('subject').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      let valid = true;
+
+      if (!name)              { setError('name',    true);  valid = false; } else { setError('name',    false); }
+      if (!validEmail(email)) { setError('email',   true);  valid = false; } else { setError('email',   false); }
+      if (!subject)           { setError('subject', true);  valid = false; } else { setError('subject', false); }
+      if (!message)           { setError('message', true);  valid = false; } else { setError('message', false); }
+
+      if (!captchaPassed) {
+        captchaErr.classList.add('show');
+        valid = false;
+      } else {
+        captchaErr.classList.remove('show');
+      }
+
+      if (!valid) return;
+
+      const body   = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+      const mailto = `mailto:paulpuccinelli0420@gmail.com`
+                   + `?subject=${encodeURIComponent(subject)}`
+                   + `&body=${encodeURIComponent(body)}`;
+      window.open(mailto, '_self');
+
+      document.getElementById('formSuccess').classList.add('show');
+      form.reset();
+      initSlider();
+
+      setTimeout(() =>
+        document.getElementById('formSuccess').classList.remove('show'), 6000);
+    });
+  </script>
+
+</body>
+</html>
