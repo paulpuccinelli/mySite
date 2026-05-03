@@ -331,6 +331,10 @@ main { padding-top: 64px; }
 .footer-logo {
   font-family: 'Dancing Script', cursive;
   font-size: 2rem; color: var(--white); margin-bottom: 22px;
+  display: flex; justify-content: center;
+}
+.footer-logo .logo-img {
+  height: 88px;
 }
 .footer-nav {
   display: flex; gap: 28px; justify-content: center;
