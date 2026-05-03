@@ -46,10 +46,16 @@ ul    { list-style: none; }
 }
 
 .logo a {
-  font-family: 'Dancing Script', cursive;
-  font-size: 1.9rem;
-  color: var(--white);
-  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 58px;
+  width: auto;
+  display: block;
+  filter: grayscale(1) contrast(100) brightness(2);
+  mix-blend-mode: screen;
 }
 
 .nav-links {

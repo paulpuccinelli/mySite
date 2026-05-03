@@ -6,11 +6,13 @@
   <title>Contact — Paul Puccinelli</title>
   <link rel="stylesheet" href="mySiteStyle.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>emailjs.init('Aw-hZpDKHijcHZMgE');</script>
 </head>
 <body>
 
   <header class="site-header">
-    <div class="logo"><a href="mySiteHome.html">Paul Puccinelli</a></div>
+    <div class="logo"><a href="mySiteHome.html"><img src="calSignature.png" alt="Paul Puccinelli" class="logo-img"></a></div>
     <button class="nav-toggle" id="navToggle" aria-label="Open navigation">
       <span></span><span></span><span></span>
     </button>
@@ -268,18 +270,31 @@
 
       if (!valid) return;
 
-      const body   = `Name: ${name}\nEmail: ${email}\n\n${message}`;
-      const mailto = `mailto:paulpuccinelli0420@gmail.com`
-                   + `?subject=${encodeURIComponent(subject)}`
-                   + `&body=${encodeURIComponent(body)}`;
-      window.open(mailto, '_self');
+      const submitBtn = form.querySelector('button[type="submit"]');
+      submitBtn.disabled    = true;
+      submitBtn.textContent = 'Sending…';
 
-      document.getElementById('formSuccess').classList.add('show');
-      form.reset();
-      initSlider();
-
-      setTimeout(() =>
-        document.getElementById('formSuccess').classList.remove('show'), 6000);
+      emailjs.send('service_mukxjyv', 'template_cd0p1lh', {
+        from_name:  name,
+        from_email: email,
+        subject:    subject,
+        message:    message,
+      })
+      .then(() => {
+        document.getElementById('formSuccess').classList.add('show');
+        form.reset();
+        initSlider();
+        setTimeout(() =>
+          document.getElementById('formSuccess').classList.remove('show'), 6000);
+      })
+      .catch((err) => {
+        alert('Sorry, something went wrong. Please try again or email me directly at paulpuccinelli0420@gmail.com');
+        console.error('EmailJS error:', err);
+      })
+      .finally(() => {
+        submitBtn.disabled    = false;
+        submitBtn.innerHTML   = 'Send Message &nbsp;<i class="fas fa-paper-plane"></i>';
+      });
     });
   </script>
 
