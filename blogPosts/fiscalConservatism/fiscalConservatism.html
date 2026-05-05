@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Case for Fiscal Conservatism — Paul Puccinelli</title>
+  <link rel="stylesheet" href="../../mySiteStyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="logo"><a href="../../mySiteHome.html"><img src="../../calSignature.png" alt="Paul Puccinelli" class="logo-img"></a></div>
+    <button class="nav-toggle" id="navToggle" aria-label="Open navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../../mySiteHome.html">Home</a></li>
+        <li><a href="../../mySiteAboutMe.html">About Me</a></li>
+        <li><a href="../../mySiteResume.html">Resume</a></li>
+        <li><a href="../../mySiteProjects.html">Projects</a></li>
+        <li><a href="../../mySiteBlog.html" class="active">Blog</a></li>
+        <li><a href="../../mySiteContactMe.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <div class="blog-post-hero">
+      <span class="card-tag">Economics &amp; Policy</span>
+      <h1>Fiscally Conservative</h1>
+      <p class="blog-date">May 5, 2026</p>
+    </div>
+
+    <section class="section section-white">
+      <div class="blog-post-body">
+
+        <a href="../../mySiteBlog.html" class="blog-post-back">
+          <i class="fas fa-arrow-left"></i> Back to Blog
+        </a>
+
+        <p>Few political identities have proven to be as superficially sensible as the voter who describes himself as "socially liberal, fiscally conservative." The phrase signals moderation, rationality, and an innate preference for personal freedom paired with economic discipline. It continues to appeal to college educated professionals, independents, and voters uncomfortable with perceived ideological extremes. Yet in contemporary politics, the label has become increasingly antiquated, and perhaps even fallacious.</p>
+
+        <p>The phrase's social aspect remains intelligible; one can favor civil liberties, pluralism, and a tolerant disposition while still fitting comfortably within the meaning of the term "liberal." It is the meaning of the fiscal portion that has become less clear. What, exactly, does being "fiscally conservative" entail in an era of chronic deficits, spiraling national debt, and selective hostility toward certain forms of government spending?</p>
+
+        <h2>What Fiscal Conservatism Actually Means</h2>
+
+        <p>Historically, the term "fiscal conservatism" has referred to balanced budgets, an inherent reluctance towards the accumulation of debt, restrained expenditure growth, and a belief that government spending was limited by real fiscal constraints. Throughout his book, Free to Choose, Milton Friedman argues that the economic burden of government is determined more by how much it spends rather than by how it taxes. Friedman further asserts that resources left in private hands are more efficiently allocated than resources in the hands of the government. Under this classical understanding, fiscal conservatism was not merely opposition to taxation, but a broader commitment to limiting the scale and fiscal reach of governments. This is an important distinction because conservative politicians within the Republican Party of the past 40-50 years seem to have been far more concerned with opposing taxes than with limiting budget deficits.</p>
+
+        <blockquote>
+          The problem is not that governments borrow. The problem is that they borrow without a credible plan to repay, and without being transparent with citizens about the implicit cost they are passing to future generations.
+        </blockquote>
+        
+        <h2>The Policies</h2>
+
+        <p>The Economic Recovery Tax Act of 1981 sharply reduced marginal income tax rates, accelerated depreciation allowances, and lowered business tax burdens, all of which contributed to a widening deficit in the absence of reduced government spending. Several social programs were trimmed during the Reagan years but those spending reductions were outweighed by substantial military buildup. </p>
+
+        <p>During the George W. Bush administration, the Economic Growth and Tax Relief Reconciliation Act of 2001 and Jobs and Growth Tax Relief Reconciliation Act of 2003 lowered income tax rates, dividend taxes, and capital gains taxes. Yet this period also saw major government spending expansions. Total spending rose substantially due to defense, homeland security, medicare part D, and the No Child Left Behind Act.</p>
+
+        <p>During Donald Trump’s first administration, the Tax Cuts and Jobs Act of 2017 reduced the corporate tax rate from 35% to 21%, lowered individual tax liabilities, while budgets passed in 2018 and 2019 raised discretionary spending caps, increased defense spending, and allocated additional subsidies to agriculture workers harmed by retaliatory tariffs during the US-China trade war. More recently, Trump’s Big Beautiful Bill has continued this pattern of tax relief paired with substantial increases in defense spending and border security.</p>
+
+        <p>Tax reductions appear to be pursued consistently, whereas efforts toward expenditure restraint are more selective and are frequently offset by increases in defense spending. This pattern suggests a form of fiscal conservatism that is more accurately characterized as anti-tax rather than anti-deficit. While the asymmetry is evident in the figures presented, it may be somewhat superficial in the absence of controls for lagged effects, macroeconomic conditions such as recessions and GDP growth, and exogenous shocks including military conflicts.</p>
+
+        <div id="receiptsModal" class="code-modal-overlay" onclick="if(event.target===this)this.classList.remove('open')">
+          <div class="code-modal">
+            <button class="code-modal-close" onclick="document.getElementById('receiptsModal').classList.remove('open')" aria-label="Close">
+              <i class="fas fa-times"></i>
+            </button>
+            <h3 class="code-modal-title">Source Code — Federal Receipts</h3>
+            <div class="code-modal-body">
+              <img src="receiptsCode.png" alt="Federal Receipts code">
+            </div>
+          </div>
+        </div>
+
+        <div id="debtModal" class="code-modal-overlay" onclick="if(event.target===this)this.classList.remove('open')">
+          <div class="code-modal">
+            <button class="code-modal-close" onclick="document.getElementById('debtModal').classList.remove('open')" aria-label="Close">
+              <i class="fas fa-times"></i>
+            </button>
+            <h3 class="code-modal-title">Source Code — Federal Debt</h3>
+            <div class="code-modal-body">
+              <img src="debtCode.png" alt="Federal Debt code">
+            </div>
+          </div>
+        </div>
+
+        <div class="blog-figures">
+          <figure class="blog-figure">
+            <button class="see-code-btn" onclick="document.getElementById('receiptsModal').classList.add('open')">
+              <i class="fas fa-code"></i> See Code
+            </button>
+            <img src="federalReceipts.png" alt="Federal Receipts chart">
+            <figcaption>Figure 1. </figcaption>
+          </figure>
+          <figure class="blog-figure">
+            <button class="see-code-btn" onclick="document.getElementById('debtModal').classList.add('open')">
+              <i class="fas fa-code"></i> See Code
+            </button>
+            <img src="federalDebt.png" alt="Federal Debt chart">
+            <figcaption>Figure 2. </figcaption>
+          </figure>
+        </div>
+
+        <h2>The Generational Equity Argument</h2>
+
+        <p>The strongest case for fiscal conservatism, in my opinion, is the one least often made explicitly: it is a matter of fairness across generations. When a government runs a persistent deficit, it is transferring consumption from people who are not yet born — or not yet voting — to people who are alive today. Those future people had no say in the decision and receive no direct benefit from the spending. They simply inherit the debt.</p>
+
+        <p>This is not an argument against all debt. Public investment in infrastructure, education, or research generates returns that future generations do share in, which provides a reasonable justification for borrowing. The problem is that a large fraction of current government deficits fund current consumption — transfer payments, interest on past debt, and operational expenditures — not durable assets that future citizens will use.</p>
+
+        <h2>Fiscal Conservatism vs. Austerity</h2>
+
+        <p>One of the most persistent misconceptions is conflating fiscal conservatism with austerity. They are not the same thing. Austerity — sharp, pro-cyclical cuts to government spending during downturns — is actually at odds with sound fiscal management. Cutting spending when the economy is already contracting reduces aggregate demand, can deepen recessions, and ultimately makes the fiscal position worse by shrinking the tax base.</p>
+
+        <p>Genuine fiscal conservatism would look more like:</p>
+        <ul>
+          <li>Running surpluses or near-balanced budgets during expansions to rebuild fiscal space.</li>
+          <li>Making spending and revenue commitments that are sustainable over the full business cycle.</li>
+          <li>Reforming entitlement programs before funding shortfalls become acute rather than after.</li>
+          <li>Being transparent about long-run projections and contingent liabilities, including unfunded pension obligations.</li>
+        </ul>
+
+        <p>This is a governance posture, not an ideology. It is compatible with a large public sector or a small one. What it is not compatible with is indefinitely deferring hard choices while pretending the math will somehow work out.</p>
+
+        <h2>Where I Stand</h2>
+
+        <p>I want to be clear that I am not making a claim about optimal government size here. That is a separate and deeply contested question involving value trade-offs about redistribution, public goods, and the proper scope of collective action. Reasonable people disagree, and I do not think economics alone can settle it.</p>
+
+        <p>What I do think economics can tell us is that fiscal trajectories that are unsustainable will, by definition, not be sustained. The only question is whether the adjustment comes through deliberate policy reform or through a disorderly crisis. Historically, countries that wait for the latter tend to pay far higher costs — in economic disruption, lost credibility, and the regressive impact that inflation and fiscal crises have on lower-income households who hold less financial wealth and have fewer margins of safety.</p>
+
+        <p>If that concern makes me a fiscal conservative, I am comfortable with the label.</p>
+
+        <hr class="blog-post-divider">
+
+        <p style="font-size:0.85rem;color:var(--text-light);font-style:italic;">Views expressed here are my own and do not represent any institution or employer.</p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-logo"><img src="../../calSignature.png" alt="Paul Puccinelli" class="logo-img"></div>
+    <nav class="footer-nav">
+      <a href="../../mySiteHome.html">Home</a>
+      <a href="../../mySiteAboutMe.html">About</a>
+      <a href="../../mySiteBlog.html">Blog</a>
+      <a href="../../mySiteResume.html">Resume</a>
+      <a href="../../mySiteProjects.html">Projects</a>
+      <a href="../../mySiteContactMe.html">Contact</a>
+    </nav>
+    <div class="social-links">
+      <a href="https://github.com/paulpuccinelli" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/paul-puccinelli-082276295/" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="../../mySiteContactMe.html" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+    <p class="footer-copy">&copy; 2025 Paul Puccinelli. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const nav    = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => nav.classList.toggle('open'));
+  </script>
+
+</body>
+</html>
