@@ -781,7 +781,10 @@ main { padding-top: 64px; }
 .blog-post-body {
   max-width: 760px;
   margin: 0 auto;
-  padding: 60px 48px;
+  padding: 30px 48px 60px;
+}
+.section:has(.blog-post-body) {
+  padding-top: 44px;
 }
 .blog-post-body p {
   font-size: 1rem;
