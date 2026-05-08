@@ -51,7 +51,43 @@
 
         <h2>Perception vs. Reality</h2>
 
-        <p></p>
+        <p>Understanding the theory behind key economic concepts; applying them in a manner which shapes our perception is something else entirely. When we compare how individuals perceive economic conditions to key economic indicators, a more complicated picture emerges. Perceptions are not entirely detached from reality, but they are often disproportionate, lagged, overestimated, and appear to be influenced by factors not captured by the indicators themselves. This pattern is evident in the case of inflation. </p>
+
+        <div id="inflationModal" class="code-modal-overlay" onclick="if(event.target===this)this.classList.remove('open')">
+          <div class="code-modal">
+            <button class="code-modal-close" onclick="document.getElementById('inflationModal').classList.remove('open')" aria-label="Close">
+              <i class="fas fa-times"></i>
+            </button>
+            <h3 class="code-modal-title">Source Code — CPI Inflation</h3>
+            <div class="code-modal-body">
+              <img src="cpi_inflation_code.png" alt="CPI Inflation code">
+            </div>
+          </div>
+        </div>
+
+        <div class="blog-figures">
+          <figure class="blog-figure">
+            <button class="see-code-btn" onclick="document.getElementById('inflationModal').classList.add('open')">
+              <i class="fas fa-code"></i> See Code
+            </button>
+            <img src="cpi_inflation_chart.png" alt="CPI Inflation chart">
+            <figcaption>The dotted lines represent the mean(blue) and median(green) expected inflation rates from the University of Michigan's consumer sentiment survey. The solid yellow line represents the actual CPI inflation rate from the St Louis Federal Reserve.    </figcaption>
+          </figure>
+        </div>
+
+        <p>While consumer perceptions do respond to the general trend of economic indicators, they do not mirror them consistently. The comparison between consumer expected inflation and the realized inflation rate shows a persistent gap, with expectations tending to run higher than observed price changes. This divergence is especially evident during more volatile economic periods, expectations rise sharply and are slower to fall than actual inflation. By contrast, during times of relative price stability, expected inflation appears to converge more closely with realized inflation. These patterns suggest that inflation perceptions are not formed solely on the basis of current price levels, but are also influenced by salience and broader economic narratives.</p>
+
+        <p>A similar pattern emerges when comparing consumer sentiment to more broader economic indicators.</p>
+
+        <div class="blog-figures">
+          <figure class="blog-figure">
+            <button class="see-code-btn" onclick="document.getElementById('inflationModal').classList.add('open')">
+              <i class="fas fa-code"></i> See Code
+            </button>
+            <img src="gdp_unrate_sent_chart.png" alt="GDP, Unemployment, and Sentiment chart">
+            <figcaption>The dotted lines represent the mean(blue) and median(green) expected inflation rates from the University of Michigan's consumer sentiment survey. The solid yellow line represents the actual CPI inflation rate from the St Louis Federal Reserve.    </figcaption>
+          </figure>
+        </div>        
 
         <a href="../../mySiteBlog.html" class="blog-post-back">
           <i class="fas fa-arrow-left"></i> Back to Blog
