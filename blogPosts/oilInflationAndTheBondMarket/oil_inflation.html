@@ -55,8 +55,30 @@
         
         <h2>Oil, Deficits, and a Fragile Bond Market</h2>
         
-        <p>An oil shock under current market conditions has potentially catastrophic implications. The issue is not limited to increased inflation, but it is coming at a time when bond investors are deeply concerned about inflation persistence, fiscal sustainability, and the mounting burden of government debt entering the market.</p>
+        <p>An oil shock under current market conditions has potentially catastrophic implications. The issue is not merely the inflationary impact of an oil shock, but that it would occur at a time when bond investors are already deeply concerned about inflation persistence, fiscal sustainability, and an expanding supply of Treasury issuances.</p>
         
+        <div id="oilGraphModal" class="code-modal-overlay" onclick="if(event.target===this)this.classList.remove('open')">
+          <div class="code-modal">
+            <button class="code-modal-close" onclick="document.getElementById('oilGraphModal').classList.remove('open')" aria-label="Close">
+              <i class="fas fa-times"></i>
+            </button>
+            <h3 class="code-modal-title">Source Code — Oil &amp; Inflation</h3>
+            <div class="code-modal-body">
+              <img src="oil_inflation_graph_code.png" alt="CPI Inflation chart">
+            </div>
+          </div>
+        </div>
+
+        <div class="blog-figures">
+          <figure class="blog-figure">
+            <button class="see-code-btn" onclick="document.getElementById('oilGraphModal').classList.add('open')">
+              <i class="fas fa-code"></i> See Code
+            </button>
+            <img src="oil_inflation_graph.png" alt="Oil and Inflation Chart">
+            <figcaption>This figure illustrates the relationship between crude oil price per barrel and the 5 year break-even inflation rate. Notice the seemingly lagged response of the inflation rate to the recent spike in oil price.</figcaption>
+          </figure>
+        </div> 
+
         <p>Federal deficits remain historically large outside of a recessionary environment, forcing the Treasury to issue massive amounts of new debt to fund expanding government expenditures. As a result, the supply of Treasury securities has increased dramatically over recent years. This is significant because bond markets must continuously absorb new issuances, and the willingness of investors to do so depends heavily on fiscal credibility.</p>
 
         <p>At the same time, in an effort to normalize monetary policy and reduce inflation, the Federal Reserve is no longer serving as a stabilizing buyer of Treasuries through quantitative easing. In the aftermath of the 2008 financial crisis and COVID-19 shock, the Fed absorbed large amounts of long-term Treasury securities from the market, removing duration risk exposure from private investors. Today, that dynamic has reversed. As the Fed reduces its balance sheet in its efforts to control inflation, private markets have been forced to absorb an expanding supply of long-term Treasury securities, pushing investors to demand higher yields to compensate for increased duration risk exposure.</p>
@@ -65,58 +87,14 @@
 
         <p>As a result, an oil shock may extend beyond energy markets and become the catalyst of wider stress throughout fixed income markets, destabilizing inflation expectations at a time when Treasury markets are already struggling to absorb increased issuance, rising duration supply, and a growing uncertainty surrounding fiscal sustainability. </p>
 
-        <h2>Inflation Expectations and the Treasury Market</h2>
+        <h2>From Oil Shock to Financial Shock</h2>
 
-        <p>The Treasury market’s sensitivity to oil shocks stems less from the direct impact of higher energy prices and more from what it implies about the future path of inflation and monetary policy.</p>
+        <p>This dynamic presents a seemingly unwinnable challenge for policymakers. While rising energy prices and inflation expectations could pressure the Federal Reserve to maintain restrictive monetary policy, the more immediate effect may emerge through tighter credit conditions and reduced economic activity. Higher Treasury yields increase borrowing costs across households, businesses, and the federal government, slowing investment and weakening consumer demand. The result is an economic environment in which the risk of recession rises even as inflation remains elevated, creating conditions consistently associated with stagflation.</p>
 
         <!-- <blockquote>
           The problem is not that governments borrow. The problem is that they borrow without a credible plan to repay, and without being transparent with citizens about the implicit cost they are passing to future generations.
         </blockquote> -->
         
-        <h2>The Policies</h2>
-
-        <div id="receiptsModal" class="code-modal-overlay" onclick="if(event.target===this)this.classList.remove('open')">
-          <div class="code-modal">
-            <button class="code-modal-close" onclick="document.getElementById('receiptsModal').classList.remove('open')" aria-label="Close">
-              <i class="fas fa-times"></i>
-            </button>
-            <h3 class="code-modal-title">Source Code — Federal Receipts</h3>
-            <div class="code-modal-body">
-              <img src="receiptsCode.png" alt="Federal Receipts code">
-            </div>
-          </div>
-        </div>
-
-        <div id="debtModal" class="code-modal-overlay" onclick="if(event.target===this)this.classList.remove('open')">
-          <div class="code-modal">
-            <button class="code-modal-close" onclick="document.getElementById('debtModal').classList.remove('open')" aria-label="Close">
-              <i class="fas fa-times"></i>
-            </button>
-            <h3 class="code-modal-title">Source Code — Federal Debt</h3>
-            <div class="code-modal-body">
-              <img src="debtCode.png" alt="Federal Debt code">
-            </div>
-          </div>
-        </div>
-
-        <div class="blog-figures">
-          <figure class="blog-figure">
-            <button class="see-code-btn" onclick="document.getElementById('receiptsModal').classList.add('open')">
-              <i class="fas fa-code"></i> See Code
-            </button>
-            <img src="federalReceipts.png" alt="Federal Receipts chart">
-            <figcaption>While Federal receipts as a percentage of GDP typically fluctuate in response to business cycles, the long-term trend reveals a persistent downward pressure during republican administrations.</figcaption>
-          </figure>
-          <figure class="blog-figure">
-            <button class="see-code-btn" onclick="document.getElementById('debtModal').classList.add('open')">
-              <i class="fas fa-code"></i> See Code
-            </button>
-            <img src="federalDebt.png" alt="Federal Debt chart">
-            <figcaption>While federal debt as a percentage of GDP has maintained an upward trajectory across party lines, the rate of change appears to slow and occasionally reverse during democrat administrations. </figcaption>
-          </figure>
-        </div>
-
-        <h2>Where I Stand</h2>
 
         <a href="../../mySiteBlog.html" class="blog-post-back">
           <i class="fas fa-arrow-left"></i> Back to Blog
