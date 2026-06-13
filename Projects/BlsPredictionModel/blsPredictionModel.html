@@ -41,11 +41,44 @@
           <i class="fas fa-arrow-left"></i> Back to Projects
         </a>
 
-        <iframe
-          src="BLS_prediction.html"
-          style="width:115%;height:85vh;border:none;border-radius:var(--radius);display:block;margin-bottom:32px;"
-          title="Non-Farm Payroll Surprises — Jupyter Notebook">
-        </iframe>
+        <p>The U.S. Employment Situation Report is one of the most consequential macroeconomic releases in financial markets. Published on the first Friday of each month by the Bureau of Labor Statistics (BLS), the report provides a comprehensive snapshot of U.S. labor market conditions — most notably, the monthly change in total nonfarm payroll employment. Treasury yields, equity markets, foreign exchange rates, and interest rate expectations frequently move sharply in the minutes following its release. Critically, however, market reactions are driven not by the payroll figure itself, but by how that figure compares to what analysts and investors anticipated. This difference — the payroll surprise — is the central object of interest in this project.</p>
+
+        <p>This project investigates whether publicly available economic and financial market data contain predictive information about future payroll surprises. Using labor market indicators from the Federal Reserve Economic Data (FRED) database and employment flow data from the BLS Job Openings and Labor Turnover Survey (JOLTS), I construct a statistical learning framework designed to identify economic conditions associated with unusually strong or unusually weak payroll outcomes ahead of the Employment Situation Report.</p>
+
+        <h2>Data Sources</h2>
+
+        <p>The dataset spans January 2000 through January 2025 and draws from two primary sources. The first is FRED, maintained by the Federal Reserve Bank of St. Louis, which serves as the primary repository for U.S. macroeconomic time series. From FRED, I collected eight monthly series: total nonfarm payroll employment (PAYEMS), the civilian unemployment rate (UNRATE), initial unemployment insurance claims (ICSA), continuing unemployment claims (CCSA), the 2-year Treasury yield (DGS2), the 10-year Treasury yield (DGS10), the 10-year minus 2-year yield spread (T10Y2Y), and the University of Michigan Consumer Sentiment Index (UMCSENT). These series were selected because they collectively capture the state of the labor market, investor expectations for monetary policy, and consumer confidence — all of which plausibly influence or reflect underlying employment dynamics.</p>
+
+        <p>The second source is the BLS public API, from which I retrieved four labor market flow variables from the JOLTS survey: the job openings rate, the hires rate, the quits rate, and the layoffs and discharges rate. These variables are particularly well-suited to this analysis because they capture both the demand side and the turnover side of the labor market. The quits rate, for instance, is widely regarded as a measure of worker confidence, while the layoffs rate can serve as an early signal of deteriorating employer conditions. The availability of JOLTS data beginning in December 2000 imposed the lower bound on the sample period.</p>
+
+        <h2>Methodology</h2>
+
+        <p>A defining challenge in constructing payroll surprise measures is that professional consensus forecasts — the benchmarks against which actual payrolls are typically compared — are proprietary and not freely available. To overcome this, I trained a Ridge Regression model on lagged economic indicators to generate a model-implied estimate of expected payroll growth. This expectations model achieved an out-of-sample mean absolute error of approximately 4,124 payrolls and explained roughly 46% of out-of-sample variation, providing a workable — though imperfect — proxy for market expectations.</p>
+
+        <p>Using the residuals from this expectations model, I constructed binary payroll surprise labels. Observations in the upper quartile of residuals were classified as upside surprises, while observations in the lower quartile were classified as downside surprises. This quartile-based approach focuses modeling attention on the most extreme outcomes — those most likely to elicit meaningful market reactions — while maintaining a roughly balanced distribution of classes. Before modeling, the raw features were extensively engineered to include rolling averages and momentum measures, which reduce short-term noise and capture whether labor market conditions are accelerating or decelerating over time.</p>
+
+        <p>The classification models themselves are XGBoost gradient boosted classifiers. The problem was framed as three separate tasks: a binary model for upside surprises, a binary model for downside surprises, and a multinomial model distinguishing among upside, downside, and no-surprise regimes. Each model was tuned using cross-validated grid search over key hyperparameters including maximum tree depth, learning rate, subsampling ratios, and regularization terms.</p>
+
+        <h2>Results</h2>
+
+        <p>Across all three classification frameworks, model performance improved following feature engineering and hyperparameter optimization, and all models demonstrated meaningful discriminatory power above the random baseline. The optimized upside surprise classifier achieved an out-of-sample ROC-AUC score of 0.768, up from 0.692 in the baseline model, and an overall classification accuracy of approximately 76%. The downside surprise classifier performed similarly, achieving an ROC-AUC of 0.751 and an accuracy of approximately 79% after tuning. The multinomial classifier, which faces the harder task of simultaneously distinguishing three labor market regimes, achieved an ROC-AUC of 0.747 under a one-vs-rest evaluation framework and correctly classified 62% of test observations, compared to a baseline of 57% before optimization.</p>
+
+        <p>These results suggest that labor market conditions do contain statistically meaningful information about future payroll surprises. The improvement from feature engineering indicates that nonlinear relationships between economic indicators and payroll outcomes — particularly momentum dynamics and lagged signals — contribute genuine predictive value beyond raw indicator levels.</p>
+
+        <h2>Limitations</h2>
+
+        <p>Several limitations constrain the scope and precision of the findings. Most significantly, the payroll surprise labels are derived from a model-based proxy rather than actual consensus economist forecasts. Because market reactions are driven by deviations from true market expectations rather than model expectations, the surprise classification is necessarily an approximation. A model that incorrectly characterizes the expectations baseline will produce mislabeled observations, introducing noise into both training and evaluation.</p>
+
+        <p>The sample period also presents a challenge. A 25-year window of monthly data produces a relatively small number of observations — particularly after splitting into training and test sets — which limits the statistical power available to machine learning models that typically benefit from larger samples. The period also encompasses several structurally unusual episodes, including the 2008 financial crisis and the COVID-19 pandemic, which may distort the feature relationships the models learn. Additionally, the set of available predictors is bounded by what is publicly accessible; higher-frequency indicators, proprietary survey data, and real-time financial market signals that professional investors routinely incorporate into their forecasts are not included here.</p>
+
+        <p>Finally, the analysis does not account for data revisions. BLS payroll figures are revised substantially in subsequent months, meaning that the "actual" payroll values used to construct surprise labels may differ from those that were available in real time. A more rigorous real-time analysis would use vintage data to ensure that features and labels reflect only information that was genuinely available at the time of each prediction.</p>
+
+        <div style="margin:40px 0;padding:32px;background:var(--bg);border-radius:var(--radius);text-align:center;">
+          <p style="font-size:1rem;color:var(--text-mid);margin-bottom:20px;">View the full Jupyter notebook, including all code, outputs, and visualizations.</p>
+          <a href="pred_test_2.html" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding:14px 28px;font-size:0.85rem;">
+            <i class="fas fa-external-link-alt" style="margin-right:8px;"></i>View Full Notebook
+          </a>
+        </div>
 
         <a href="../../mySiteProjects.html" class="blog-post-back">
           <i class="fas fa-arrow-left"></i> Back to Projects
@@ -71,7 +104,7 @@
       <a href="../../mySiteContactMe.html">Contact</a>
     </nav>
     <div class="social-links">
-      <a href="https://github.com/paulpuccinelli" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://github.com/paulpuccinelli/BLS_jobs_report_model" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
       <a href="https://linkedin.com/in/paul-puccinelli-082276295/" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
       <a href="../../mySiteContactMe.html" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
     </div>
@@ -82,6 +115,7 @@
     const toggle = document.getElementById('navToggle');
     const nav    = document.getElementById('navLinks');
     toggle.addEventListener('click', () => nav.classList.toggle('open'));
+
   </script>
 
 </body>
